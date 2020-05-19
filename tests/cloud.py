@@ -40,3 +40,6 @@ class Cloud:
 
     def connect(self, arguments):
         return run_script(constants.connect_script_path, arguments)
+
+    def register(self, arguments):
+        return run_script(constants.register_script_path, arguments)

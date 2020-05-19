@@ -1,4 +1,3 @@
-import pytest
 from pytest_bdd import scenario, given, when, then
 from thing import Thing
 from cloud import Cloud
@@ -26,6 +25,7 @@ def add_thing(setup):
     test_thing = setup[0]
     test_cloud = setup[1]
     assert test_cloud.count(option="all") == 0
+    assert test_cloud.register("knot:thing ArCondicionado")
     result = test_cloud.add(option='thing',
                             object=test_thing)
     assert result

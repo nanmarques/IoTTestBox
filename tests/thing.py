@@ -9,6 +9,7 @@ class Thing:
         self._id = id
         self._token = token
         self._name = name
+        self._sensors = []
 
     def get_prop(self, prop):
         if prop == "id":
@@ -17,5 +18,10 @@ class Thing:
             return self._token
         elif prop == "name":
             return self._name
+        elif prop == "sensors":
+            return self._sensors
         else:
             return None
+
+    def add_sensor(self, sensor):
+        self._sensors.append(sensor)
